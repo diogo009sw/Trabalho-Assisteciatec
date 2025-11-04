@@ -5,9 +5,9 @@ async function Listar(){
     return alunos;
 }
 
-async function Inserir(nome, sobrenome){
-    let sql = "INSERT INTO ALUNO(NOME, SOBRENOME) VALUES (?,?)";
-    const [alunos] = await (con.connection).query(sql, [nome, sobrenome]);
+async function Inserir(matricula, nome, sobrenome){
+    let sql = "INSERT INTO ALUNO(MATRICULA, NOME, SOBRENOME) VALUES (?, ?,?)";
+    const [alunos] = await (con.connection).query(sql, [matricula, nome, sobrenome]);
     return alunos;
 }
 async function Editar(id, nome, sobrenome){

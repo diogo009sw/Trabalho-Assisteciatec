@@ -4,8 +4,8 @@ async function Listar(){
     return alunos;    
 }
 
-async function Inserir(nome, sobrenome){
-    const aluno = await repoAluno.Inserir(nome, sobrenome);
+async function Inserir(matricula, nome, sobrenome){
+    const aluno = await repoAluno.Inserir(matricula, nome, sobrenome);
     return aluno;
 }
 
